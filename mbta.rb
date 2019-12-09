@@ -8,16 +8,16 @@ def stops_between_stations (start_line, start_station, end_line, end_station)
         orange:["North Station", "Haymarket", "Park Street", "State", "Downtown Crossing","Chinatown", "Back Bay", "Forest Hills"]
         }
 
-        $startStationIndex = $subwayLines[startLine].index(startStation)
-    $endStationIndex = $subwayLines[endLine].index(endStation)
+        $startStationIndex = $subway[startLine].index(startStation)
+    $endStationIndex = $subway[endLine].index(endStation)
 
     if startLine === endLine
       return ($startStationIndex - $endStationIndex).abs
     end
 
-    $startLineParkStreetIndex = $subwayLines[startLine].index('Park Street')
+    $startLineParkStreetIndex = $subway[startLine].index('Park Street')
  	  $tripToParkStreet = ($startStationIndex - $startLineParkStreetIndex).abs
- 	  $endLineParkStreetIndex = $subwayLines[endLine].index('Park Street')
+ 	  $endLineParkStreetIndex = $subway[endLine].index('Park Street')
     $tripToDestination = ($endStationIndex - $endLineParkStreetIndex).abs
     $totalTrip = $tripToParkStreet + $tripToDestination
     return $totalTrip
