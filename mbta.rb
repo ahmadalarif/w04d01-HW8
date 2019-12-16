@@ -29,5 +29,5 @@ end
 p stops_between_stations('red', 'Alewife', 'red', 'South Station') # 7
 p stops_between_stations('red', 'Alewife', 'red', 'Alewife') # 0
 p stops_between_stations('red', 'South Station', 'green', 'Kenmore') # 6 
-
+    
 
